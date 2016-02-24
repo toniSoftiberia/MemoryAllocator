@@ -1,4 +1,5 @@
-#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 #include "Globals.h"
 #include "MemMan.h"
 //#include <vld.h> 
@@ -7,96 +8,113 @@ using namespace std;
 
 int main(int argc, char ** argv)
 {
-	MemMan manager(108);
+	//Pool manager();
+	//my_pool reserve memory
 
-	manager.printPool();
+	inicializePool(102);
 
-	manager.printMap();
+	printPool();
+
+	
+	printMap();
 
 
-	LOG("Allocate new element");
-	int new_pos = manager._new();
+	OWN_LOG("Allocate new element");
+	int new_pos = _malloc(1);
 	if (new_pos > 0) {
-		manager.setInfo("TestMem", new_pos);
+		setInfo("TestMem", new_pos, 1);
 	}
-	manager.printMap();
+	printMap();
 
-	LOG("Allocate new elements[8]");
-	new_pos = manager._new(8);
+
+	OWN_LOG("Allocate new elements[8]");
+	new_pos = _malloc(8);
 	if (new_pos > 0) {
-		manager.setInfo("En un lugar de la Mancha, de cuyo nombre no quiero acordarme...", new_pos, 8);
+		setInfo("En un lugar de la Mancha, de cuyo nombre no quiero acordarme...", new_pos, 8);
 	}
-	manager.printMap();
+	printMap();
 
-	LOG("Allocate elements to the end");
-	int free_postions = manager.free_memory / DATA_SIZE;
+
+	OWN_LOG("Allocate elements to the end");
+	int free_postions = my_pool->free_memory / DATA_SIZE;
 	for (int i = 0; i < free_postions; ++i) {
-		new_pos = manager._new();
+		new_pos = _malloc(1);
 		if (new_pos > 0) {
-			manager.setInfo("TestMem", new_pos);
+			setInfo("TestMem", new_pos, 1);
 		}
 	}
-	manager.printMap();
+	printMap();
 
-	LOG("Free position 3");
-	manager._delete(3);
-	manager.printMap();
-
-	LOG("Allocate new element");
-	new_pos = manager._new();
-	if (new_pos > 0) {
-		manager.setInfo("NewElem", new_pos);
-	}
-	manager.printMap();
-
-	LOG("Free position 4");
-	manager._delete(4);
-	manager.printMap();
-
-	LOG("Allocate new elements[8]");
-	new_pos = manager._new(8);
-	if (new_pos > 0) {
-		manager.setInfo("Hace mucho tiempo, en una galaxia muy, muy lejana. Es un periodo", new_pos, 8);
-	}
-	manager.printMap();
 	
-	LOG("Free positions from 3 to 11");
+	OWN_LOG("Free position 3");
+	_free(3, 1);
+	printMap();
+
+	
+	OWN_LOG("Allocate new element");
+	new_pos = _malloc(1);
+	if (new_pos > 0) {
+		setInfo("NewElem", new_pos, 1);
+	}
+	printMap();
+
+	
+	OWN_LOG("Free position 4");
+	_free(4, 1);
+	printMap();
+
+	
+	OWN_LOG("Allocate new elements[8]");
+	new_pos = _malloc(8);
+	if (new_pos > 0) {
+		setInfo("Hace mucho tiempo, en una galaxia muy, muy lejana. Es un periodo", new_pos, 8);
+	}
+	printMap();
+	
+	
+	OWN_LOG("Free positions from 3 to 11");
 	for (int i = 3; i < 12; ++i) {
-		manager._delete(i);
+		_free(i, 1);
 	}
-	manager.printMap();
+	printMap();
 
 
-	LOG("Allocate new elements[8]");
-	new_pos = manager._new(8);
+	
+	OWN_LOG("Allocate new elements[8]");
+	new_pos = _malloc(8);
 	if (new_pos > 0) {
-		manager.setInfo("Hace mucho tiempo, en una galaxia muy, muy lejana. Es un periodo", new_pos, 8);
+		setInfo("Hace mucho tiempo, en una galaxia muy, muy lejana. Es un periodo", new_pos, 8);
 	}
-	manager.printMap();
+	printMap();
 
 
-	LOG("Allocate new element");
-	new_pos = manager._new();
+	
+	OWN_LOG("Allocate new element");
+	new_pos = _malloc(1);
 	if (new_pos > 0) {
-		manager.setInfo("LastEl1", new_pos);
+		setInfo("LastEl1", new_pos, 1);
 	}
-	manager.printMap();
+	printMap();
 
-	LOG("Allocate new element");
-	new_pos = manager._new();
+	
+	OWN_LOG("Allocate new element");
+	new_pos = _malloc(1);
 	if (new_pos > 0) {
-		manager.setInfo("LastEl2", new_pos);
+		setInfo("LastEl2", new_pos, 1);
 	}
-	manager.printMap();
+	printMap();
 
-	/*
-	LOG("Free all memory");
-	for (int i = 0; i < manager.pool_size / DATA_SIZE; ++i) {
-		manager._delete(i);
+	
+	OWN_LOG("Free all memory");
+	for (int i = 0; i < my_pool->pool_size / DATA_SIZE; ++i) {
+		_free(i,1);
 	}
-	manager.printMap();*/
 
-	manager.printPool();
+	printMap();
+
+	printPool();
+
+	deletePool();
 
 	return 0;
 }
