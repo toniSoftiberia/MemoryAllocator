@@ -103,6 +103,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -146,13 +147,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Log.cpp" />
+    <ClCompile Include="addition.c" />
+    <ClCompile Include="additionTests.c" />
+    <ClCompile Include="Log.c" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MemMan.c" />
+    <ClCompile Include="MemManTest.c" />
+    <ClCompile Include="MemManTest.h" />
+    <ClCompile Include="testFramework.c" />
+    <ClCompile Include="TestMain.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="addition.h" />
+    <ClInclude Include="additionTests.h" />
     <ClInclude Include="Globals.h" />
+    <ClInclude Include="Log.h" />
     <ClInclude Include="MemMan.h" />
+    <ClInclude Include="testFramework.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
