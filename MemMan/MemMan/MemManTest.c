@@ -13,6 +13,7 @@ void setupMem()
 {
 	OWN_LOG("TS============= Setup memory manager ===============");
 	inicializePool(1024);
+	srand(time(NULL));
 	OWN_LOG("TE==================================================");
 	return;
 };
@@ -64,7 +65,6 @@ int testAllocateNewElement()
 
 int testAllocateNElements()
 {
-	srand(time(NULL));
 	int num_elements = rand() % my_pool->pool_size + 1;
 	num_elements /= DATA_SIZE;
 	OWN_LOG("TS========== Allocate new elements[%d] =============", num_elements);
@@ -108,7 +108,6 @@ int testFillAllMemory()
 
 void testFreePosition()
 {
-	srand(time(NULL));
 	int position = rand() % my_pool->pool_size + 1;
 	position /= DATA_SIZE;
 	OWN_LOG("TS============== Free position %d ==================", position);
@@ -121,10 +120,8 @@ void testFreePosition()
 
 void testFreeRange()
 {
-	srand(time(NULL));
 	int start = rand() % my_pool->pool_size + 1;
 	start /= DATA_SIZE;
-	srand(time(NULL));
 	int large = rand() % my_pool->pool_size + 1;
 	large /= DATA_SIZE;
 	OWN_LOG("TS======== Free positions from %d to %d ============", start, start + large);

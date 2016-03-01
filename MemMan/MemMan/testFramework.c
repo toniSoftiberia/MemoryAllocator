@@ -16,7 +16,7 @@ int callTestSuite(UNITTESTSUITE suite)
 	if (suite.setup)
 		(suite.setup());
 
-	for (int i = 0; i < 10; ++i){
+	for (int i = 0; i < 2; ++i){
 		test = suite.tests;
 		while (test->test != 0)
 		{
