@@ -1,16 +1,15 @@
 #pragma once
 
 #include "testFramework.h"
+#include "MemManTest.h"
 
 extern void setupMem();
 extern void teardownMem();
 extern int testAllocateNewElement();
 extern int testAllocateNElements();
-extern int testFillAllMemory();
-extern void testFreePosition();
-extern void testFreeRange();
-extern void testFreeAllMemory();
-extern void testShowState();
+extern int testFreePosition();
+extern int testFreeRange();
+extern int testShowState();
 
 extern UNITTEST memManTests[];
 extern UNITTESTSUITE memManSuite;

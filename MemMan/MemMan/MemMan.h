@@ -18,13 +18,12 @@ Pool* my_pool;
 
 extern int getFreeMemoryBlocks();
 extern char* getInfo(int pos, int lenght);
-extern int setInfo(char * data, int pos, int lenght);
 extern void freeMemoryActualize(int length, char free);
 extern int markMap(int pos, int lenght, char free);
-extern void inicializePool(int pool_size);
+extern int initializePool(int pool_size);
 extern void deletePool();
-extern int getFirstFreePlace(int lenght);
-extern int _malloc(int lenght);
+extern void* getFirstFreePlace(int lenght);
+extern void* _malloc(int lenght);
 extern int _free(int pos, int lenght);
 //extern void printPool();
 //extern void printMap();

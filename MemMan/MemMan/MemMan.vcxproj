@@ -147,10 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="addition.c" />
-    <ClCompile Include="additionTests.c" />
     <ClCompile Include="Log.c" />
-    <ClCompile Include="Main.cpp" />
     <ClCompile Include="MemMan.c" />
     <ClCompile Include="MemManTest.c" />
     <ClCompile Include="MemManTest.h" />
@@ -158,8 +155,6 @@
     <ClCompile Include="TestMain.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="addition.h" />
-    <ClInclude Include="additionTests.h" />
     <ClInclude Include="Globals.h" />
     <ClInclude Include="Log.h" />
     <ClInclude Include="MemMan.h" />

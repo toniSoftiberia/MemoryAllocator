@@ -4,6 +4,7 @@
 #include "log.h"
 
 /* include the unit test .h files here */
+#include "testFramework.h"
 #include "MemManTest.h"
 
 int main(int argc, char**argv)
