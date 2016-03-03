@@ -2,10 +2,9 @@
 #include <stdlib.h>
 #include "Globals.h"
 #include "log.h"
-
-/* include the unit test .h files here */
-#include "testFramework.h"
 #include "MemManTest.h"
+
+//#pragma comment(lib, "advapi32.lib")
 
 int main(int argc, char**argv)
 {

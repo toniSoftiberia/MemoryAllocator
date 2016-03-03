@@ -1,7 +1,6 @@
 #pragma once
 
 #include "testFramework.h"
-#include "MemManTest.h"
 
 extern void setupMem();
 extern void teardownMem();

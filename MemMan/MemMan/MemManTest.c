@@ -9,14 +9,16 @@
 //TS: Test start
 //TE: Test end
 
+char* new_pos_test;
+
 void setupMem()
 {
 	OWN_LOG("TS============= Setup memory manager ===============");
+
 	if (initializePool(1024)) {
 		srand((unsigned int)time(NULL));
 		testShowState();
-	}
-	else {
+	} else {
 		TESTFAILED("Cannot start Memory Manager, cannot reserve memory");
 	}
 
@@ -27,20 +29,17 @@ void teardownMem()
 {
 	OWN_LOG("TS=========== Tear down memory manager =============");
 	OWN_LOG("Free all memory");
-	for (int i = 0; i < my_pool->pool_size / DATA_SIZE; ++i) {
-		int res = _free(i, 1);
-		switch (res) {
-		case -1:
-			OWN_LOG("You cannot delete the position 0 it is reserved");
-			break;
-		case -2:
-			OWN_LOG("OUT OF RANGE: %d", i);
-			break;
-		//default:
-			//OWN_LOG("Deleting position %d", i);
-		}
+	
+	//Mark all mapa as free
+	int res = initMap();
+	if (res == 0) {
+		OWN_LOG("All memory freed");
 	}
+	else
+		OWN_LOG("Memory not freed correctly");
+		
 	testShowState();
+	
 	deletePool();
 	OWN_LOG("TE==================================================");
 	return;
@@ -49,7 +48,9 @@ void teardownMem()
 int testShowState()
 {
 	OWN_LOG("TS================ Printing state ==================");
+
 	DumpDetailedPool();
+
 	OWN_LOG("TE==================================================");
 	return 1;
 };
@@ -58,11 +59,12 @@ int testAllocateNewElement()
 {
 	OWN_LOG("TS============= Allocate new element ===============");
 	int res = 0;
-	char* new_pos = (char *)_malloc(sizeof(char) * 4);
+	//char* new_pos = (char *)_malloc(sizeof(char) * 4);
+	new_pos_test = (char *)_malloc(sizeof(char) * 4);
 	//char* new_pos2 = (char *)malloc(sizeof(char) * 4);
 	//if (new_pos != NULL && new_pos2 != NULL) {
-	if (new_pos != NULL) {
-		strcpy(new_pos, "Try");
+	if (new_pos_test != NULL) {
+		strcpy(new_pos_test, "Try");
 		//new_pos2 = "Try";
 		res = 1;
 	}
@@ -81,8 +83,9 @@ int testAllocateNewElement()
 
 int testAllocateNElements()
 {
-	const int num_elements = (rand() % my_pool->pool_size / DATA_SIZE + 1) ;
-	OWN_LOG("TS========== Allocate new elements[%d] =============", num_elements);
+	int num_elements = (rand() % my_pool->pool_size / DATA_SIZE + 1) ;
+	//num_elements = 1050;
+	OWN_LOG("TS========== Allocate new elements[%d] =============", num_elements / DATA_SIZE);
 	int res = 0;
 	char* new_pos = (char *)_malloc(sizeof(char) * num_elements);
 	if (new_pos != NULL) {
@@ -105,7 +108,7 @@ int testFreePosition()
 {
 	int position = (rand() % my_pool->pool_size + 1) / DATA_SIZE;
 	OWN_LOG("TS============== Free position %d ==================", position);
-	int res = _free(position, 1);
+	int res = _free(new_pos_test);
 	switch (res) {
 	case -1:
 		OWN_LOG("You cannot delete the position 0 it is reserved");
@@ -143,8 +146,8 @@ int testFreeRange()
 			break;
 		}
 	}
-	//printMap();
-	DumpPool();
+	DumpDetailedPool();
+	//DumpPool();
 
 	OWN_LOG("TE==================================================");
 	return 1;
@@ -154,8 +157,9 @@ int testFreeRange()
 //UNITTEST memManTests[] = { &testShowState, &testAllocateNewElement, &testAllocateNElements, &testFillAllMemory, &testFreePosition, &testFreeRange, &testShowState, 0 };
 //UNITTEST memManTests[] = { &testAllocateNewElement, &testAllocateNElements, &testFreePosition, &testFreeRange, 0 }; 
 UNITTEST memManTests[] = { &testAllocateNewElement,
-&testAllocateNElements,
+//&testAllocateNElements,
 &testFreePosition,
 //&testFreeRange,
+&testShowState,
 0 };
 UNITTESTSUITE memManSuite = { &setupMem, &teardownMem, memManTests };
