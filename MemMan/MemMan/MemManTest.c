@@ -157,7 +157,7 @@ int testFreeRange()
 //UNITTEST memManTests[] = { &testShowState, &testAllocateNewElement, &testAllocateNElements, &testFillAllMemory, &testFreePosition, &testFreeRange, &testShowState, 0 };
 //UNITTEST memManTests[] = { &testAllocateNewElement, &testAllocateNElements, &testFreePosition, &testFreeRange, 0 }; 
 UNITTEST memManTests[] = { &testAllocateNewElement,
-//&testAllocateNElements,
+&testAllocateNElements,
 &testFreePosition,
 //&testFreeRange,
 &testShowState,

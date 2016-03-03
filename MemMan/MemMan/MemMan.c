@@ -53,10 +53,14 @@ int markMap(int pos, int lenght, char free) {
 			my_pool->_map[pos] != 'F') {
 
 			int i = pos;
-			for (; my_pool->_map[i] != 'F' &&  my_pool->_map[i] != 'R'; ++i) {
+			//for (; my_pool->_map[i] != 'F' && my_pool->_map[i] != 'R'; ++i) {
+			for (; my_pool->_map[i] == 'O'; ++i) {
 				my_pool->_map[i] = 'F';
 				++size;
 			}
+			if( my_pool->_map[i] == 'E')
+					my_pool->_map[i] = 'F';
+
 			res = 1;
 		}
 	}
