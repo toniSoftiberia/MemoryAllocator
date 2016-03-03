@@ -129,9 +129,9 @@ void deletePool()
 	OWN_LOG("Destroying memory manager");
 	//check for memory leaks
 
-	//free(my_pool->_map);
-	//free(my_pool->_pool);
-	//free(my_pool);
+	free(my_pool->_map);
+	free(my_pool->_pool);
+	free(my_pool);
 }
 
 //Malloc & Free
