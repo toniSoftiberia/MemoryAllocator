@@ -3,12 +3,9 @@
 #include "testFramework.h"
 #include "Globals.h"
 
-<<<<<<< HEAD
-//#define TEST1
-#define TEST2
+#define TEST1
+//#define TEST2
 
-=======
->>>>>>> master
 int num_of_tests = 100;
 
 int callTest(UNITTEST *test)

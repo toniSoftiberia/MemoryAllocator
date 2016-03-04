@@ -141,9 +141,6 @@ int testFreeNewElems()
 	return res;
 };
 
-/* add each additional unit test to this array */
-//UNITTEST memManTests[] = { &testShowState, &testAllocateNewElement, &testAllocateNElements, &testFillAllMemory, &testFreePosition, &testFreeRange, &testShowState, 0 };
-//UNITTEST memManTests[] = { &testAllocateNewElement, &testAllocateNElements, &testFreePosition, &testFreeRange, 0 }; 
 UNITTEST memManTests[] = { &testAllocateNewElems,
 &testFreeNewElems,
 //&testShowState,
