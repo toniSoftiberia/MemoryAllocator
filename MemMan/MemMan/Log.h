@@ -4,9 +4,15 @@
 #include <stdio.h>
 #include "Globals.h"
 #include <stdlib.h>
+#include "MemManTest.h"
 
 // output file
-#define LOGFILE	"log_MemMan.log"   
+#ifdef TEST1
+#define LOGFILE	"log_MemMan_custom.log"   
+#endif // TEST1
+#ifdef TEST2
+#define LOGFILE	"log_MemMan_original.log"   
+#endif // TEST2
 
 // keeps track whether the log file is created or not
 extern int log_created;      

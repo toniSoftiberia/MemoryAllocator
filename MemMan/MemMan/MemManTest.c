@@ -6,9 +6,6 @@
 #include "MemMan.h"
 #include <time.h>
 
-//#define TEST1
-#define TEST2
-
 //TS: Test start
 //TE: Test end
 
