@@ -4,9 +4,8 @@
 
 extern void setupMem();
 extern void teardownMem();
-extern int testAllocateNewElement();
-extern int testAllocateNElements();
-extern int testFreePosition();
+extern int testAllocateNewElems();
+extern int testFreeNewElems();
 extern int testFreeRange();
 extern int testShowState();
 

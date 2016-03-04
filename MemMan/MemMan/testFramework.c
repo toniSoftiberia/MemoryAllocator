@@ -3,6 +3,11 @@
 #include "testFramework.h"
 #include "Globals.h"
 
+//#define TEST1
+#define TEST2
+
+int num_of_tests = 100;
+
 int callTest(UNITTEST *test)
 {
 	return (*test).test();
@@ -16,7 +21,7 @@ int callTestSuite(UNITTESTSUITE suite)
 	if (suite.setup)
 		(suite.setup());
 
-	for (int i = 0; i < 1; ++i){
+	for (int i = 0; i < num_of_tests; ++i){
 		test = suite.tests;
 		while (test->test != 0)
 		{

@@ -10,11 +10,6 @@ int getFreeMemoryBlocks() {
 	return my_pool->free_memory / DATA_SIZE;
 }
 
-/* Get the info on the pool*/
-char* getInfo(int pos, int lenght) {
-	return &my_pool->_pool[pos];
-}
-
 /*
 Marks the map from position pos to pos + lenght as free(true/false)
 Return:
@@ -58,9 +53,10 @@ int markMap(int pos, int lenght, char free) {
 				my_pool->_map[i] = 'F';
 				++size;
 			}
-			if( my_pool->_map[i] == 'E')
-					my_pool->_map[i] = 'F';
-
+			if (my_pool->_map[i] == 'E') {
+				my_pool->_map[i] = 'F';
+				++size;
+			}
 			res = 1;
 		}
 	}
@@ -103,11 +99,11 @@ int initializePool(int pool_size)
 {
 	my_pool = (struct Pool *) malloc(sizeof(struct Pool));
 
-	OWN_LOG("Creating the memory manager");
+	//OWN_LOG("Creating the memory manager");
 	my_pool->pool_size = pool_size;
-	OWN_LOG("Pool size: %d", my_pool->pool_size);
+	//OWN_LOG("Pool size: %d", my_pool->pool_size);
 	my_pool->free_memory = pool_size ;
-	OWN_LOG("Free memory: %d", my_pool->free_memory);
+	//OWN_LOG("Free memory: %d", my_pool->free_memory);
 
 	//Reserve the memory
 	my_pool->_pool = (char *)malloc(pool_size);
@@ -126,7 +122,7 @@ int initializePool(int pool_size)
 
 void deletePool()
 {
-	OWN_LOG("Destroying memory manager");
+	//OWN_LOG("Destroying memory manager");
 	//check for memory leaks
 
 	free(my_pool->_map);
@@ -164,50 +160,39 @@ void* _malloc(int lenght) {
 				int free = 1;
 				int j = 0;
 				
-				for (; j < positions_to_reserve && j < my_pool->pool_size / DATA_SIZE; ++j) {
-					if (j+ i > 250)
-						j = j;
+				for (; j < positions_to_reserve && j + i < my_pool->pool_size / DATA_SIZE; ++j)
 					free &= (my_pool->_map[i + j / DATA_SIZE] == 'F');
-				}
-
 
 				if (free && j == positions_to_reserve) {
 					found = 1;
 					--i;
 				}
 				else {
-					//optimization for loop speed up
-					//i = j; //Don't work
-					i = --j;
+					found = 0;
+					res = NULL;
 				}
 
 			}
 		}
 
 		if (found) {
-			OWN_LOG("Free position found");
-			//OK: Start position memory reserved
-			
+			//OWN_LOG("Free position found");			
 			my_pool->_pool[i*DATA_SIZE] = 'P';
 			my_pool->_pool[i*DATA_SIZE + 1] = 'U';
 			my_pool->_pool[i*DATA_SIZE + 2] = 'N';
 			my_pool->_pool[i*DATA_SIZE + 3] = 'K';
 			res = &(my_pool->_pool[i*DATA_SIZE]);
 
-			//for (int j = 0; j < lenght / DATA_SIZE; ++j)
-			//	markMap(i + (j / DATA_SIZE), lenght, '0');
-			int j = 0;
-			//for (; j < positions_to_reserve; ++j) {
 			markMap(i, positions_to_reserve, 'O');
-			//}
 		}
 		else {
-			OWN_LOG("Free position not found");
+			//OWN_LOG("Free position not found");
+			res = NULL;
 		}
 	}
-	else {
-		OWN_LOG("Memory full");
-	}
+	//else {
+		//OWN_LOG("Memory full");
+	//}
 
 	return res;
 }
@@ -216,14 +201,14 @@ int _free(void * ptr) {
 	int res = 0;
 
 	int pos = getPos(ptr);
-	OWN_LOG("Free position getPos: %d", pos);
+	//OWN_LOG("Free position getPos: %d", pos);
 	int map_pos = pos / DATA_SIZE;
 	int lenght = 1;
 
 	if (map_pos == 0) {
 		res = -1;
 	}
-	else if (map_pos > 0 && pos < my_pool->pool_size / DATA_SIZE) {
+	else if (map_pos > 0 && map_pos < my_pool->pool_size / DATA_SIZE) {
 		markMap(map_pos, lenght, 'F');
 	}
 	else {
@@ -244,7 +229,7 @@ int getPos(void * ptr) {
 		if (&my_pool->_pool[middle] < (void *)ptr)
 			first = middle + 1;
 		else if (&my_pool->_pool[middle] == (void *)ptr) {
-			printf("%d found at location %d.\n", ptr, middle);
+			//printf("%d found at location %d.\n", ptr, middle);
 			break;
 		}
 		else
@@ -253,12 +238,13 @@ int getPos(void * ptr) {
 		middle = (first + last) / 2;
 	}
 	if (first > last) {
-		printf("Not found! %d is not present in the list.\n", ptr);
+		//printf("Not found! %d is not present in the list.\n", ptr);
 		middle = -1;
 	}
 
 
 	int res = middle;
+	return res;
 }
 
 /* Dump memory pool */
