@@ -7,6 +7,8 @@
 #include "MemMan.h"
 #include <time.h>
 
+#include "brofiler/Brofiler.h"
+
 //TS: Test start
 //TE: Test end
 
@@ -16,6 +18,7 @@ int kB_of_memory = 1;
 
 void setupMem()
 {
+	BROFILER_CATEGORY("setupMem", Profiler::Color::Aqua)
 	OWN_LOG("TS============= Setup memory manager ===============");
 
 	if (initializePool(1024 * kB_of_memory)) {
@@ -23,7 +26,7 @@ void setupMem()
 		charArray = (char **)_malloc(sizeof(char *) * 10);
 #endif // TEST1
 #ifdef TEST2
-		charArray* = (char **)malloc(sizeof(char *) * 10);
+		charArray = (char **)malloc(sizeof(char *) * 10);
 #endif // TEST2
 		srand((unsigned int)time(NULL));
 		testShowState();
@@ -36,26 +39,30 @@ void setupMem()
 
 void teardownMem()
 {
+	BROFILER_CATEGORY("teardownMem", Profiler::Color::Brown)
 	OWN_LOG("TS=========== Tear down memory manager =============");
 	OWN_LOG("Free all memory");
 	
 	//Mark all mapa as free
 	int res = initMap();
-	if (res == 0) {
+	if (res == 1) {
 		OWN_LOG("All memory freed");
 	}
 	else
 		OWN_LOG("Memory not freed correctly");
 		
 	testShowState();
-	
-	deletePool();
+
+	#ifdef TEST1
+		deletePool();
+	#endif // TEST1
 	OWN_LOG("TE==================================================");
 	return;
 };
 
 int testShowState()
 {
+	BROFILER_CATEGORY("testShowState", Profiler::Color::Coral)
 	OWN_LOG("TS================ Printing state ==================");
 
 	DumpDetailedPool();
@@ -66,6 +73,7 @@ int testShowState()
 
 int testAllocateNewElems()
 {
+	BROFILER_CATEGORY("testAllocateNewElems", Profiler::Color::Orange)
 	OWN_LOG("TS========== Allocating new elements ==============");
 	int res = 0;
 
@@ -125,6 +133,7 @@ int testAllocateNewElems()
 
 int testFreeNewElems()
 {
+	BROFILER_CATEGORY("testFreeNewElems", Profiler::Color::Yellow)
 	OWN_LOG("TS=========== Releasing new elements ===============");
 	int res = 0;
 

@@ -7,10 +7,7 @@
 
 #pragma comment(lib, "brofiler/ProfilerCore32.lib")
 
-#define TEST1
-//#define TEST2
-
-int num_of_tests = 100;
+int num_of_tests = 1000;
 
 int callTest(UNITTEST *test)
 {
@@ -26,7 +23,7 @@ int callTestSuite(UNITTESTSUITE suite)
 		(suite.setup());
 
 	for (int i = 0; i < num_of_tests; ++i){
-		BROFILER_FRAME("YourThreadName");
+		BROFILER_FRAME("Main");
 		test = suite.tests;
 		while (test->test != 0)
 		{
