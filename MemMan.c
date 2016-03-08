@@ -3,8 +3,7 @@
 #include <stdlib.h>
 #include "MemMan.h"
 
-struct Pool;
-
+struct Pool* my_pool;
 
 /* Try to allocate "num" data
 Return:

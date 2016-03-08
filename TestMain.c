@@ -4,10 +4,8 @@
 #include "log.h"
 #include "MemManTest.h"
 
-//#pragma comment(lib, "advapi32.lib")
-
 int main(int argc, char**argv)
-{
+{	
 	int res = 2;
 	DWORD count = GetTickCount();
 	OWN_LOG("TEST BEGIN");

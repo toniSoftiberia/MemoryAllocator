@@ -11,7 +11,7 @@ struct Pool {
 	//Pool *Next;			//pointer to the next Pool
 };
 
-Pool* my_pool;
+extern Pool* my_pool;
 
 extern char* string_strip;
 

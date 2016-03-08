@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "testFramework.h"
 #include "MemManTest.h"
@@ -19,10 +20,10 @@ void setupMem()
 
 	if (initializePool(1024 * kB_of_memory)) {
 #ifdef TEST1
-		charArray = (char *)_malloc(sizeof(char *) * 10);
+		charArray = (char **)_malloc(sizeof(char *) * 10);
 #endif // TEST1
 #ifdef TEST2
-		charArray = (char *)malloc(sizeof(char *) * 10);
+		charArray* = (char **)malloc(sizeof(char *) * 10);
 #endif // TEST2
 		srand((unsigned int)time(NULL));
 		testShowState();
@@ -91,7 +92,7 @@ int testAllocateNewElems()
 
 
 	for (; i < 10; ++i) {
-		int num_elements = (rand() % my_pool->pool_size / DATA_SIZE + 1);
+		int num_elements = (rand() % getFreeMemoryBlocks() + 1);
 		if (num_elements > 1040)
 			num_elements = 1040;
 

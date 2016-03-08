@@ -3,6 +3,10 @@
 #include "testFramework.h"
 #include "Globals.h"
 
+#include "brofiler/Brofiler.h"
+
+#pragma comment(lib, "brofiler/ProfilerCore32.lib")
+
 #define TEST1
 //#define TEST2
 
@@ -22,6 +26,7 @@ int callTestSuite(UNITTESTSUITE suite)
 		(suite.setup());
 
 	for (int i = 0; i < num_of_tests; ++i){
+		BROFILER_FRAME("YourThreadName");
 		test = suite.tests;
 		while (test->test != 0)
 		{
