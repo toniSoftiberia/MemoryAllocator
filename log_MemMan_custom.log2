@@ -1,0 +1,113 @@
+
+d:\workvisual\memoryallocator\testmain.c(11) : TEST BEGIN
+d:\workvisual\memoryallocator\memman.c(264) : ============== Dumping Memory pool ================
+d:\workvisual\memoryallocator\memman.c(265) : POSITION           MEMORY DATA                MAP  
+d:\workvisual\memoryallocator\memman.c(316) : 00000000   RESฌ ออออ ออออ ออออ ออออ ออออ     ROOOOO
+d:\workvisual\memoryallocator\memman.c(316) : 00000024   ออออ ออออ ออออ ออออ ออออ ออออ     OOOOEF
+d:\workvisual\memoryallocator\memman.c(316) : 00000048   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000072   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000096   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000120   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000144   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000168   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000192   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000216   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000240   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000264   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000288   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000312   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000336   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000360   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000384   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000408   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000432   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000456   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000480   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000504   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000528   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000552   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000576   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000600   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000624   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000648   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000672   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000696   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000720   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000744   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000768   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000792   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000816   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000840   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000864   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000888   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000912   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000936   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000960   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000984   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00001008   ออออ ออออ ออออ ออออ               FFFF
+d:\workvisual\memoryallocator\memman.c(271) : Map size:                      256
+d:\workvisual\memoryallocator\memman.c(272) : Free Memory elements:          245
+d:\workvisual\memoryallocator\memman.c(273) : Pool size (Bytes):             1024
+d:\workvisual\memoryallocator\memman.c(274) : Free Bytes:                    980
+d:\workvisual\memoryallocator\memman.c(275) : Single element size (Bytes):   4
+d:\workvisual\memoryallocator\memman.c(276) : ============ End Dumping Memory pool ==============
+d:\workvisual\memoryallocator\memman.c(264) : ============== Dumping Memory pool ================
+d:\workvisual\memoryallocator\memman.c(265) : POSITION           MEMORY DATA                MAP  
+d:\workvisual\memoryallocator\memman.c(316) : 00000000   RESฌ t sฌ กsฌ คกsฌ จกsฌ ฌกsฌ     RFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000024   ฐกsฌ ดกsฌ ธกsฌ ผกsฌ ภกsฌ En u     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000048   n lu gar  de l a Ma ncha , de     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000072    cuy o no mbre  no  quie ro a     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000096   cord arme ,  n o ha  muc ho t     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000120   iemp o qu e vi vํa  un h idal     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000144   go d e lo s de  lan za e n as     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000168   till ero,  ada rga  anti gua,     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000192    ฌออ En u n lu gar  de l a Ma     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000216   ncha , de  cuy o no mbre  no      FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000240   quie ro a cord arme ,  n o ha     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000264    muc ho t iemp o qu e vi vํa      FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000288   un h idal go d e lo s de  lan     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000312   za e n as till ero,  ada rga      FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000336   anti gua,  ฌออ Tryฌ Tryฌ Tryฌ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000360   Tryฌ Tryฌ Tryฌ Tryฌ Tryฌ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000384   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000408   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000432   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000456   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000480   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000504   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000528   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000552   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000576   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000600   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000624   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000648   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000672   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000696   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000720   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000744   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000768   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000792   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000816   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000840   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000864   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000888   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000912   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000936   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000960   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00000984   ออออ ออออ ออออ ออออ ออออ ออออ     FFFFFF
+d:\workvisual\memoryallocator\memman.c(316) : 00001008   ออออ ออออ ออออ ออออ               FFFF
+d:\workvisual\memoryallocator\memman.c(271) : Map size:                      256
+d:\workvisual\memoryallocator\memman.c(272) : Free Memory elements:          255
+d:\workvisual\memoryallocator\memman.c(273) : Pool size (Bytes):             1024
+d:\workvisual\memoryallocator\memman.c(274) : Free Bytes:                    1020
+d:\workvisual\memoryallocator\memman.c(275) : Single element size (Bytes):   4
+d:\workvisual\memoryallocator\memman.c(276) : ============ End Dumping Memory pool ==============
+d:\workvisual\memoryallocator\memman.c(264) : ============== Dumping Memory pool ================
+d:\workvisual\memoryallocator\memman.c(265) : POSITION           MEMORY DATA                MAP  
+d:\workvisual\memoryallocator\memman.c(271) : Map size:                      -143165576
+d:\workvisual\memoryallocator\memman.c(272) : Free Memory elements:          -143165576
+d:\workvisual\memoryallocator\memman.c(273) : Pool size (Bytes):             -572662307
+d:\workvisual\memoryallocator\memman.c(274) : Free Bytes:                    -572662307
+d:\workvisual\memoryallocator\memman.c(275) : Single element size (Bytes):   4
+d:\workvisual\memoryallocator\memman.c(276) : ============ End Dumping Memory pool ==============
+d:\workvisual\memoryallocator\testmain.c(17) : TEST END in 3697 ms

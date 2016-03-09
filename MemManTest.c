@@ -91,7 +91,7 @@ void testNewSingle(int pos)
 		charArray[pos] = (char *)_malloc(sizeof(char) * 4);
 	#endif // TEST1
 	#ifdef TEST2
-		charArray[i] = (char *)malloc(sizeof(char) * 4);
+		charArray[pos] = (char *)malloc(sizeof(char) * 4);
 	#endif // TEST2
 
 	if (charArray[pos] != NULL) {
