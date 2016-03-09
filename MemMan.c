@@ -49,11 +49,11 @@ void* _malloc(int lenght) {
 		}
 
 		if (found) {
-			//OWN_LOG("Free position found");			
+			/*//OWN_LOG("Free position found");			
 			my_pool->_pool[i*DATA_SIZE] = 'P';
 			my_pool->_pool[i*DATA_SIZE + 1] = 'U';
 			my_pool->_pool[i*DATA_SIZE + 2] = 'N';
-			my_pool->_pool[i*DATA_SIZE + 3] = 'K';
+			my_pool->_pool[i*DATA_SIZE + 3] = 'K';*/
 			res = &(my_pool->_pool[i*DATA_SIZE]);
 
 			markMap(i, positions_to_reserve, 'O');

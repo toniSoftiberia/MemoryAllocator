@@ -7,7 +7,7 @@
 
 #pragma comment(lib, "brofiler/ProfilerCore32.lib")
 
-int num_of_tests = 1000;
+int num_of_tests = 1000000;
 
 int callTest(UNITTEST *test)
 {
@@ -27,6 +27,7 @@ int callTestSuite(UNITTESTSUITE suite)
 		test = suite.tests;
 		while (test->test != 0)
 		{
+			//BROFILER_FRAME("Test");
 			if (callTest(test++))
 			{
 				printf(".");
@@ -47,6 +48,6 @@ int callTestSuite(UNITTESTSUITE suite)
 
 void testFailed(const char* testName, const int testLine, const char* message)
 {
-	fprintf(stderr, "%s(%i): ERROR test failed, %s\n", testName, testLine, message);
-	OWN_LOG("%s(%i): ERROR test failed, %s\n", testName, testLine, message);
+	//fprintf(stderr, "%s(%i): ERROR test failed, %s\n", testName, testLine, message);
+	//OWN_LOG("%s(%i): ERROR test failed, %s\n", testName, testLine, message);
 };
