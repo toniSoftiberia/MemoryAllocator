@@ -7,7 +7,7 @@
 
 #pragma comment(lib, "brofiler/ProfilerCore32.lib")
 
-int num_of_tests = 10000;
+int num_of_tests = 1000000;
 
 int callTest(UNITTEST *test)
 {

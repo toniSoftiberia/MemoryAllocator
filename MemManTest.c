@@ -18,13 +18,13 @@ int kB_of_memory = 1;
 
 void setupMem()
 {
-	printf("This program will start in 3");
+	/*printf("This program will start in 3");
 	_sleep(1000);
 	printf(" 2");
 	_sleep(1000);
 	printf(" 1");
 	_sleep(1000);
-	printf(" Go!");
+	printf(" Go!");*/
 	BROFILER_CATEGORY("Setup", Profiler::Color::Aqua)
 	//OWN_LOG("TS============= Setup memory manager ===============");
 
@@ -68,7 +68,7 @@ void teardownMem()
 		free(charArray);
 	#endif // TEST2
 
-	testShowState();
+	//testShowState();
 	//OWN_LOG("TE==================================================");
 	return;
 };
@@ -195,8 +195,8 @@ int testFreeNewElems()
 
 UNITTEST memManTests[] = {
 &testAllocateDataOnStart, &testFreeNewElems,
-//&testAllocateDataOnMiddle, &testFreeNewElems,
-//&testAllocateDataOnEnd, &testFreeNewElems,
+&testAllocateDataOnMiddle, &testFreeNewElems,
+&testAllocateDataOnEnd, &testFreeNewElems,
 //&testShowState,
 0 };
 UNITTESTSUITE memManSuite = { &setupMem, &teardownMem, memManTests };
